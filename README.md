@@ -1,38 +1,25 @@
 Role-Based Access Control (RBAC) Project
+
 Overview
 This is a web application implementing Role-Based Access Control (RBAC) with three distinct roles: Admin, Manager, and User. The application allows users to log in, view role-specific content, and manage access permissions based on their roles. It includes features like registration, login, and protected routes that can only be accessed by users with specific roles.
 
 overall file structure of the project 
 
-rbac/
- |
- |______node_modules
- |______src/
- |        |
- |        |________config/
- |        |            |______dbConnect.js
- |        |           
- |        |________controllers
- |        |            |______authController.js
- |        |
- |        |_________middlewares
- |        |            |______authMiddleware.js
- |        |            |______roleMiddleware.js
- |        |
- |        |_________models
- |        |            |______userModel.js
- |        |
- |        |_________routes
- |                     |______authRoutes.js
- |                     |______userRoutes.js
- |
- |______.gitignore
- | 
- |______index.js
- |
- |______package-lock.json
- |
- |______package.json
+
+### Folder Explanation:
+- **node_modules/**: Contains all the project dependencies installed via npm.
+- **src/**: The main source code for the backend application.
+  - **config/**: Configuration files (e.g., for database connections).
+  - **controllers/**: Contains files that handle the business logic for different routes.
+  - **middlewares/**: Custom middleware for authorization and role checking.
+  - **models/**: Mongoose or database models that interact with the database.
+  - **routes/**: API endpoints that connect the backend logic to the frontend.
+- **.gitignore**: Specifies which files/folders should be ignored by Git (e.g., node_modules).
+- **index.js**: The main entry point for the server.
+- **package.json**: Contains project metadata, scripts, and dependencies.
+- **package-lock.json**: Ensures reproducible builds by locking dependency versions.
+
+
 
  Features
 Role-Based Access:
